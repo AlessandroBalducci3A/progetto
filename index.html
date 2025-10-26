@@ -12,8 +12,35 @@
   <p>HTML CSS JS</p>
   
   <button id="vaiPagina">Vai alla nuova pagina</button>
+  
+  <!-- crediti  -->
+  <button id="credits">Crediti</button>
+  <div id="popup">
+  <p>Questo progetto è stato ideato da Alessandro Balducci (4^A SIA), realizzato con
+    la preziosa collaborazione di Andrea Tacchini(4^A SIA).
+    Tutto questo è stato reso possibile grazie all'aiuto di...
+  </p>
+  <button id="closecredits">Torna indietro</button>
+</div>
 
-  <!-- 🔗 Collega il file JavaScript -->
+<!-- script dei crediti -->
+<script>
+  const openBtn = document.getElementById('credits');
+  const closeBtn = document.getElementById('closecredits');
+  const popup = document.getElementById('popup');
+
+  // Mostra lo spazio
+  openBtn.addEventListener('click', () => {
+    popup.style.display = 'block';
+  });
+
+  // Nascondi lo spazio
+  closeBtn.addEventListener('click', () => {
+    popup.style.display = 'none';
+  });
+</script>
+
+  <!--  Collega il file JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
