@@ -109,10 +109,14 @@ def chatbot(scelta):
 
         if not risposta_trovata:
             print("\nChatbot: Mi dispiace, non ho capito la domanda. Prova con una domanda diversa.")
+        continua == input("\nVuoi selezionare un'altra modalità? (si/no): ").lower()
+        if continua != 'si':
+            comanda()
         continua = input("\nVuoi fare un'altra domanda? (si/no): ").lower()
-        
         if continua != 'si':
             sys.exit()
+        
+
         else:
             cambio_argomento = input("\nChatbot: Vuoi cambiare argomento? (si/no) ").lower()
             if cambio_argomento == "si":
